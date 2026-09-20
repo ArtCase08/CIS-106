@@ -1,0 +1,10 @@
+#input
+purchase_price = float(input("Enter the purchase price of the stock: "))
+stock_price = float(input("enter the current stock price: "))
+stock_quantity = int(input("Enter the quantity wanted: "))
+
+#processing
+Value_of_stock = (stock_price - purchase_price) * stock_quantity
+
+#output
+print("The value of the stock is $", Value_of_stock)

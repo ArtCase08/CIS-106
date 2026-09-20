@@ -1,0 +1,10 @@
+#input
+fixed_cost = float(input("Enter the fixed cost: "))
+price_per_unit = float(input("Enter the unit price: "))
+cost_per_unit = float(input("Enter the cost per unit: "))
+
+#processing
+break_even_point = (fixed_cost / (price_per_unit - cost_per_unit))
+
+#output
+print("The break-even point is: ", break_even_point)

@@ -1,0 +1,24 @@
+#input
+meal_cost = float(input("Enter the cost of the meal: "))
+#processing
+FIFTEEN_PERCENT_TIP = (meal_cost * .15) 
+EIGHTEEN_PERCENT_TIP = (meal_cost * .18) 
+TWENTY_PERCENT_TIP = (meal_cost * .20)
+total_15 = meal_cost + FIFTEEN_PERCENT_TIP
+total_18 = meal_cost + EIGHTEEN_PERCENT_TIP
+total_20 = meal_cost + TWENTY_PERCENT_TIP
+
+#output
+print("Total meal cost: $", meal_cost)
+print(" 15% tip: $", FIFTEEN_PERCENT_TIP)
+print(" Total with 15% tip: $", total_15)
+
+print("Total meal cost: $", meal_cost)
+print(" 18% tip: $", EIGHTEEN_PERCENT_TIP)
+print(" Total with 18% tip: $", total_18)
+
+print("Total meal cost: $", meal_cost)
+print(" 20% tip: $", TWENTY_PERCENT_TIP)
+print(" Total with 20% tip: $", total_20)
+
+

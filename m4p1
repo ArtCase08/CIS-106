@@ -1,0 +1,11 @@
+# input
+exam_score1 = int(input("First exam score: "))
+exam_score2 = int(input("Second exam score: "))
+
+# processing
+exam_score1 = exam_score1 * .60
+exam_score2 = exam_score2 * .40
+average_score = (exam_score1 + exam_score2)
+
+# output
+print("Average score of the student is:" , average_score)
