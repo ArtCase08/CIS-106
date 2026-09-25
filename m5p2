@@ -1,0 +1,17 @@
+#input
+item = (input("Enter the item number: "))
+quantity = float(input("Enter the quantity of item: "))
+
+#processing
+if item == "A":   
+    price_per_item = 10.00
+else:
+    price_per_item = 20.00
+
+extended_price = (quantity * price_per_item)
+
+#output
+
+print(f"The item is: {item}")
+print(f"The unit price is : ${price_per_item}")
+print(f"The extended price is: ${extended_price}")

@@ -1,0 +1,18 @@
+#input
+quantity = int(input("Enter the quantity of item: "))
+
+#processing
+if quantity >= 1000:
+    price_per_item = 3
+else:
+    price_per_item = 5
+
+tax = (quantity * price_per_item * 0.07)
+extended_price = (quantity * price_per_item) 
+total_price = (extended_price + tax)
+#output
+print(f"The total quantity is: {quantity}")
+print(f"The unit price is : ${price_per_item}")
+print(f"The extended price is: ${extended_price}")
+print(f"The extended price plus tax is: ${total_price}")
+

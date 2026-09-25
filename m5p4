@@ -1,0 +1,16 @@
+#input
+
+name = input("Enter your name: ")
+appliance = int(input("Enter the cost of the appliance: "))
+
+#processing
+if appliance > 1000:
+    warrante_fee = appliance * 0.10
+else:
+    warrante_fee = appliance * 0.05
+total_fee = appliance + warrante_fee
+#output
+print(f"Name: {name}")
+print(f"The appliance cost is: ${appliance}")
+print(f"The warranty fee is: ${warrante_fee}")
+print(f"The total cost of the appliance and warranty is: ${total_fee}")
