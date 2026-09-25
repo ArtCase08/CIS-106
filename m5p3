@@ -4,7 +4,7 @@ cost_per_book = float(input("Enter the cost per book: "))
 
 #processing
 total_cost = (books_number * cost_per_book)
-if total_cost < 50:
+if total_cost <= 50:
     shipping_cost = 25
 else:
     shipping_cost = 0
