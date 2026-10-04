@@ -1,0 +1,19 @@
+#input
+concert_tickets = int(input("Enter the number of concert tickets purchased: "))
+
+#processing
+if concert_tickets >= 25:
+    ticket_price = 50
+elif concert_tickets >= 10:
+    ticket_price = 60
+elif concert_tickets >= 5:
+    ticket_price = 70
+else:
+    ticket_price = 75
+
+total_cost = concert_tickets * ticket_price
+
+#output
+print(f"The number of concert tickets purchased is: {concert_tickets}")
+print(f"The price per concert ticket is: ${ticket_price:.2f}")
+print(f"The total cost of the concert tickets is: ${total_cost:,.2f}")

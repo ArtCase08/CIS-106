@@ -1,0 +1,22 @@
+#input
+part_number = int(input("Enter the part number: "))
+quantity_widgets = int(input("Enter the quantity of widgets: "))
+
+#processing
+if part_number == 10 or part_number == 55:
+    cost_unit = 1.00
+elif part_number == 99:
+    cost_unit = 2.00
+elif part_number == 80 or part_number == 70:
+    cost_unit = 3.00
+else:
+    cost_unit = 5.00
+
+total_cost = quantity_widgets * cost_unit
+
+#output
+print(f"Part number: {part_number}")
+print(f"Cost per unit: ${cost_unit:.2f}")
+print(f"The total cost of the widgets is: ${total_cost:.2f}")
+
+   

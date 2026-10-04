@@ -1,0 +1,20 @@
+#input
+quantity_widgets = int(input("Enter the amount of widgets: "))
+
+#processing
+
+if quantity_widgets > 10000:
+    price = 10
+elif quantity_widgets >= 5000:
+    price = 20
+else:
+    price = 30
+
+extended_price = quantity_widgets * price
+tax = extended_price * 0.07
+total = extended_price + tax
+
+#output
+print(f"Extended price: ${extended_price:}")
+print(f"Tax: ${tax:.2f}")
+print(f"Total: ${total:.2f}")
