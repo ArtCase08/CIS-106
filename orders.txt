@@ -1,0 +1,15 @@
+Widget
+10
+50
+Hammer
+2
+10
+Saw
+4
+8
+Drill
+1
+89.99
+Screwdriver
+6
+4.50
