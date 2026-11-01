@@ -1,0 +1,42 @@
+
+def compute_assessed_value(county, market_value):
+    county = county.lower()
+
+    if county == "cook":
+        pct = 0.90
+    elif county == "dupage":
+        pct = 0.80
+    elif county == "mchenry":
+        pct = 0.75
+    elif county == "kane":
+        pct = 0.60
+    else:
+        pct = 0.70
+
+    assessed_value = market_value * pct
+    return assessed_value
+
+
+total_market = 0
+total_assessed = 0
+
+response = input("Do you want to enter a home? (Yes/No): ")
+
+while response.lower() == "yes":
+    county = input("Enter county: ")
+    market_value = float(input("Enter market value: "))
+
+    assessed = compute_assessed_value(county, market_value)
+
+    total_market = total_market + market_value
+    total_assessed = total_assessed + assessed
+
+    print("County:", county)
+    print("Assessed Value: $", format(assessed, ",.2f"))
+    print()
+
+    response = input("Do you want to enter another home? (Yes/No): ")
+
+print()
+print("Total of all Market Values: $", format(total_market, ",.2f"))
+print("Total of all Assessed Values: $", format(total_assessed, ",.2f"))

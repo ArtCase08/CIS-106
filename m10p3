@@ -1,0 +1,41 @@
+
+def compute_otd_price(msrp, make, model, electric):
+    if electric.upper() == "Y":
+        pct_off = 0.30
+    elif make.lower() == "honda" and model.lower() == "accord":
+        pct_off = 0.10
+    elif make.lower() == "toyota" and model.lower() == "rav4":
+        pct_off = 0.15
+    else:
+        pct_off = 0.05
+
+    new_msrp = msrp - (msrp * pct_off)
+    total = new_msrp * 1.07     # add 7% sales tax
+    return total
+
+
+total_msrp = 0
+total_sales = 0
+
+response = input("Do you want to enter a car? (Yes/No): ")
+
+while response.lower() == "yes":
+    make = input("Enter make: ")
+    model = input("Enter model: ")
+    electric = input("Is it an electric vehicle? (Y/N): ")
+    msrp = float(input("Enter MSRP: "))
+
+    otd_price = compute_otd_price(msrp, make, model, electric)
+
+    total_msrp = total_msrp + msrp
+    total_sales = total_sales + otd_price
+
+    print("Car:", make, model)
+    print("Out the Door Price: $", format(otd_price, ",.2f"))
+    print()
+
+    response = input("Do you want to enter another car? (Yes/No): ")
+
+print()
+print("Total of all MSRPs: $", format(total_msrp, ",.2f"))
+print("Total of all Sales Prices: $", format(total_sales, ",.2f"))

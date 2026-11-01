@@ -1,0 +1,33 @@
+
+def compute_forecast(month, sales):
+    month = month[:3].capitalize()  
+
+    if month in ["Jan", "Feb", "Mar"]:
+        forecast_pct = 0.10
+    elif month in ["Apr", "May", "Jun"]:
+        forecast_pct = 0.15
+    elif month in ["Jul", "Aug", "Sep"]:
+        forecast_pct = 0.20
+    elif month in ["Oct", "Nov", "Dec"]:
+        forecast_pct = 0.25
+    else:
+        forecast_pct = 0
+
+    next_month_sales = sales * (1 + forecast_pct)
+    return next_month_sales
+
+
+response = input("Do you want to enter sales? (Yes/No): ")
+
+while response.lower() == "yes":
+    last_name = input("Enter last name: ")
+    month = input("Enter month (Jan, Feb, etc.): ")
+    sales = float(input("Enter sales: "))
+
+    next_sales = compute_forecast(month, sales)
+
+    print("Last Name:", last_name)
+    print("Next Month's Sales Forecast: $", format(next_sales, ",.2f"))
+    print()
+
+    response = input("Do you want to enter more sales? (Yes/No): ")

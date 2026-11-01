@@ -1,0 +1,31 @@
+
+def compute_wall_sqft(length, width, height):
+    wall_sqft = (2 * length * height) + (2 * width * height)
+    return wall_sqft
+
+
+# Bonus - area of the ceiling or floor
+def compute_ceiling_area(length, width):
+    return length * width
+
+
+response = input("Do you want to enter a room? (Yes/No): ")
+
+while response.lower() == "yes":
+    length = float(input("Enter length of room (ft): "))
+    width = float(input("Enter width of room (ft): "))
+    height = float(input("Enter height of room (ft): "))
+
+    wall_sqft = compute_wall_sqft(length, width, height)
+    wall_gallons = wall_sqft / 50
+
+    ceiling_area = compute_ceiling_area(length, width)
+    ceiling_gallons = ceiling_area / 50
+
+    print("Wall Square Footage:", format(wall_sqft, ",.2f"))
+    print("Gallons of Wall Paint Needed:", format(wall_gallons, ".2f"))
+    print("Ceiling/Floor Area:", format(ceiling_area, ",.2f"))
+    print("Gallons of Ceiling Paint/Floor Varnish Needed:", format(ceiling_gallons, ".2f"))
+    print()
+
+    response = input("Do you want to enter another room? (Yes/No): ")
